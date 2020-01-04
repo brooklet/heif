@@ -28,8 +28,12 @@ task clean(type: Delete) {
 
 ext {
     compileSdkVersion = 26
-    minSdkVersion = 24
+    minSdkVersion = 21
     targetSdkVersion = 26
 
-    chosenAbiFilters = ["armeabi-v7a", "arm64-v8a", "x86"]
+    chosenAbiFilters = [
+            "armeabi-v7a"
+            , "arm64-v8a"
+            , "x86"
+    ]
 }

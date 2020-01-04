@@ -102,8 +102,12 @@ if(COVERAGE)
   link_libraries(--coverage -ftest-coverage -fprofile-arcs)
 endif(COVERAGE)
 
+#if(ANDROID)
+#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__GXX_EXPERIMENTAL_CXX0X__ -D_FILE_OFFSET_BITS=64")
+#endif()
+
 if(ANDROID)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__GXX_EXPERIMENTAL_CXX0X__ -D_FILE_OFFSET_BITS=64")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__GXX_EXPERIMENTAL_CXX0X__")
 endif()
 
 if(IOS)
